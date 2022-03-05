@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  flask:
+    image: tkim911/project1
+    build: .
+    restart: always
+    ports:
+      - "80:5000"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    command: ["flask", "run"]
+    volumes:
+      - .:/home/myuser
