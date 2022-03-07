@@ -47,28 +47,58 @@
         <div class="col-sm-1">
             <img src="{{ url_for('static', filename='images/dockerlogo.png') }}" class="content-img">
         </div>
-        <div class="col-md-5">
+        <div class="col-lg">
             <h1 class="row">The Docker Whale</h1>
-            <p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It
-                offers the distributed version control and source code management (SCM) functionality of Git, plus its
-                own features. It provides access control and several collaboration features such as bug tracking,
-                feature requests, task management, continuous integration and wikis for every project.</p>
+            <p>Docker is an open platform for developing, shipping, and running applications. Docker enables you to
+                separate your applications from your infrastructure so you can deliver software quickly.</p>
             <h3 class="row">Docker Image</h3>
-            <p>A branch in a git repository is a contributor's copy of the source code with their changes.
-                the contributor will push their local code to the origin repository to save their changes.</p>
+            <p>An image is a read-only template with instructions for creating a Docker container. Often, an image is
+                based on another image, with some additional customization.</p>
             <h3 class="row">Docker Container</h3>
-            <p>This is used to combine branch A into branch B. GitHub will then check to see if there are any merge
-                conflicts between the two branches and will ask the merger to resolve them if detected.</p>
+            <p>Docker provides the ability to package and run an application in a loosely isolated environment called a
+                container. The isolation and security allows you to run many containers simultaneously on a given host.
+                Containers are lightweight and contain everything needed to run the application, so you do not need to
+                rely on what is currently installed on the host. You can easily share containers, and be
+                sure that everyone you share with gets the same container that works in the same way.</p>
             <h3 class="row">Docker Commands</h3>
             <ul>
                 <li>
-
+                    docker-compose - command to use the docker-compose.yml orchestration file that contains the
+                    configurations to develop locally<br>
+                    docker-compose up --build -d <- command to build this project and deploy it locally
+                </li>
+                <li>
+                    build - creates an image based on the Dockerfile
+                </li>
+                <li>
+                    commit - saves the selected container as an image
+                </li>
+                <li>
+                    push - sends the image to a docker repo
+                </li>
+                <li>
+                    run - starts a container based on a selected image
+                </li>
+                <li>
+                    images - lists the images that are on the host
+                </li>
+                <li>
+                    ps - lists the containers that are on the host
+                </li>
+                <li>
+                    rm - removes the selected containers/images from the host
+                </li>
+                <li>
+                    exec - used to execute commands inside of the container<br>
+                    ex: docker exec -it 'container' /bin/bash <- runs an interactive bash terminal
                 </li>
             </ul>
         </div>
         <div class="col-5">
             <h5>Docker Image</h5>
-
+            <a href="https://hub.docker.com/repository/docker/tkim911/project1">
+                <img src="{{ url_for('static', filename='images/dockerimage.png') }}" class="img-thumbnail thumbnail-size">
+            </a>
         </div>
     </div>
 </div>

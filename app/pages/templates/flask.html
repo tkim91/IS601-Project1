@@ -48,12 +48,12 @@
             <img src="{{ url_for('static', filename='images/pythonlogo.png') }}" class="content-img mb-3">
             <img src="{{ url_for('static', filename='images/flasklogo.png') }}" class="content-img mb-3">
         </div>
-        <div class="col-md-5">
+        <div class="col-lg">
             <h1 class="row">The Language and the Web Framework</h1>
-            <p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It
-                offers the distributed version control and source code management (SCM) functionality of Git, plus its
-                own features. It provides access control and several collaboration features such as bug tracking,
-                feature requests, task management, continuous integration and wikis for every project.</p>
+            <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its
+                high-level built in data structures, combined with dynamic typing and dynamic binding, make it very
+                attractive for Rapid Application Development, as well as for use as a scripting or glue language to
+                connect existing components together.</p>
             <p>Flask is a micro web framework written in Python. It is classified as a microframework because it does
                 not require particular tools or libraries. It has no database abstraction layer, form validation, or
                 any other components where pre-existing third-party libraries provide common functions. However, Flask
@@ -75,6 +75,10 @@
                         <li>app/ <- Directory for webpage files
                             <ul>
                                 <li>pages/ <- Directory for HTML content</li>
+                                    <ul>
+                                        <li>templates/ <- Directory for served pages</li>
+                                        <li>__init__.py <- File that binds endpoints to the HTML files</li>
+                                    </ul>
                                 <li>static/ <- Directory for non-HTML content
                                     <ul>
                                         <li>css/ <- Directory for styling file</li>
@@ -86,24 +90,24 @@
                                 <li>run.py <- File that runs the create command</li>
                             </ul>
                         </li>
+                        <li>tests/ <- Directory for pytest test cases</li>
+                        <li>.coveragerc <- Config file to control coverage.py</li>
                         <li>.dockerignore <- Config file with a list of files that docker ignores</li>
                         <li>.gitignore <- Config file with a list of files that git ignores</li>
-                        <li>Docker file <- File used to create an image to run in a container that runs the program</li>
-                        <li>README.md <- File for repo details and instructions</li>
+                        <li>.pylintrc <- Config file to control pylint.py</li>
                         <li>docker-compose.yml <- Orchestration file that contains the configuration to develop locally,
                             it overrides the Dockerfile to run the flask development server instead of running the
                             gunicorn server that is used for hosting on Heroku</li>
+                        <li>Docker file <- File used to create an image to run in a container that runs the program</li>
                         <li>heroku.yml <- Docker file for building heroku image</li>
+                        <li>README.md <- File for repo details and instructions</li>
                         <li>requirements.txt <- A list of python dependencies that need to be installed before running</li>
                     </ul>
                 </li>
             </ul>
             <h3 class="row">Testing with Pytest</h3>
-            <p>This is used to combine branch A into branch B. GitHub will then check to see if there are any merge
-                conflicts between the two branches and will ask the merger to resolve them if detected.</p>
-            <h3 class="row">Docker Commands</h3>
-            <p>Commits are snapshots of your local code that you want to send to git via push. You can rollback to
-                prior commits to undo any major changes.</p>
+            <p>Testing is conducted by creating test functions in the tests/ directory. Assert statements are used to
+                check for </p>
         </div>
         <div class="col-5">
             <h5>Source Code</h5>
@@ -113,10 +117,13 @@
             <h5>Documentation</h5>
             <ul>
                 <li class="source">
+                    <a href="https://docs.python.org/3/">Python</a>
+                </li>
+                <li class="source">
                     <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a>
                 </li>
-                <li>
-                    <a href="https://docs.python.org/3/">Python</a>
+                <li class="source">
+                    <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/">Flask Blueprints</a>
                 </li>
             </ul>
         </div>

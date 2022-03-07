@@ -50,16 +50,33 @@
         <div class="col-lg">
             <h1 class="row">Heroku: Our CICD Platform</h1>
             <p>Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage,
-                and scale modern apps.</p>
+                and scale modern apps. CICD stands for Continuous Integration Continuous Delivery and can be broken up
+                into two parts.
+                <ul>
+                    <li>
+                        Continuous Integration: A software development practice where members of a team integrate their
+                        work frequently, and each integration is verified by an automated build (including test) to
+                        detect integration errors as quickly as possible.
+                    </li>
+                    <li>
+                        Continuous Delivery: A software development discipline where you build software in such a way
+                        that the software can be released to production at any time.
+                    </li>
+
+                </ul>
+            </p>
             <h3 class="row">GitHub Actions</h3>
-            <p>A branch in a git repository is a contributor's copy of the source code with their changes.
-                the contributor will push their local code to the origin repository to save their changes.</p>
+            <p>These are deployment instructions that GitHub will take whenever code is pushed or merged. This project
+                has rules setup so that whenever code is merged into the Master branch, it will deploy the application
+                onto the Heroku dev and prod servers.</p>
             <h3 class="row">Development and Testing</h3>
-            <p>This is used to combine branch A into branch B. GitHub will then check to see if there are any merge
-                conflicts between the two branches and will ask the merger to resolve them if detected.</p>
+            <p>During development, automated tests are set up so that GitHub can let the user know if there are any
+                issues that arise with any changes that have been pushed. The test version of the application gets
+                deployed on the heroku dev server to view your changes on a web page before prod deployment.</p>
             <h3 class="row">Deployment</h3>
-            <p>Commits are snapshots of your local code that you want to send to git via push. You can rollback to
-                prior commits to undo any major changes.</p>
+            <p>Once the code passes all tests and is merged, the application gets deployed onto the heroku prod
+                server. The instructions in the prod.yml file in the .github/workflows directory pushes the built
+                prod image onto docker hub.</p>
         </div>
         <div class="col-5">
             <h5>Sources</h5>

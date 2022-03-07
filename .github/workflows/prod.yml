@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: tkim911/heroku-cicd
+          images: tkim911/project1
 
       - name: Build and push
         uses: docker/build-push-action@v2
