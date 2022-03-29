@@ -30,6 +30,25 @@ def test_request_git(client):
     response = client.get("/git")
     assert response.status_code == 200
 
+def test_request_git(client):
+    """This makes the AAA page"""
+    response = client.get("/aaa")
+    assert response.status_code == 200
+
+def test_request_git(client):
+    """This makes the Pylint page"""
+    response = client.get("/pylint")
+    assert response.status_code == 200
+
+def test_request_git(client):
+    """This makes the OOP page"""
+    response = client.get("/oop")
+    assert response.status_code == 200
+
+def test_request_git(client):
+    """This makes the SOLID page"""
+    response = client.get("/solid")
+    assert response.status_code == 200
 
 def test_request_page_not_found(client):
     """This checks for a non-hosted page"""

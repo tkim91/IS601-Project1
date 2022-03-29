@@ -17,7 +17,7 @@
 
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+        <title>{% block title %}{% endblock %}Project</title>
     {% endblock %}
 
 </head>
@@ -33,7 +33,7 @@
                 <a class="navbar-brand" href="#">Menu</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active active-hl" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/cicd">CICD</a>
@@ -46,6 +46,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/git">GIT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/aaa">AAA Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/oop">OOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/pylint">Pylint</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/solid">SOLID</a>
                     </li>
                 </ul>
             </div>
@@ -105,7 +117,7 @@
 </div>
 <footer class="center">
     <p>Author: Thomas Kim<br>
-    <a href="mailto:tdk4@njit.edu">tdk4@njit.edu</a>
+        <a href="mailto:tdk4@njit.edu">tdk4@njit.edu</a>
     </p>
 </footer>
 </body>
