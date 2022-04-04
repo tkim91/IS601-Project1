@@ -58,46 +58,155 @@
 <div id="title">
     <h1>Object Oriented Programming</h1>
 </div>
-<div>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ipsum consequat nisl vel pretium lectus. Lacus sed turpis tincidunt id aliquet risus feugiat in.
-        Fermentum leo vel orci porta non pulvinar neque laoreet. Et netus et malesuada fames ac turpis egestas. Arcu
-        risus quis varius quam. A cras semper auctor neque vitae tempus. Aliquam ultrices sagittis orci a scelerisque
-        purus. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Malesuada fames ac turpis
-        egestas integer eget aliquet. Vivamus arcu felis bibendum ut tristique et egestas quis ipsum. Nunc sed velit
-        dignissim sodales ut eu sem integer vitae. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Mi in
-        nulla posuere sollicitudin.
+<div class="container">
+    <div class="col px-8">
+        <h4>What is Object-oriented Programming?</h4>
+        <p>Object-oriented programming (OOP) is a programming paradigm that is used by nearly every developer at some
+            point in their programming career. It is so popular that it is taught as the standard way of programming at
+            most institutions. OOP structures a software program into simple, reusable pieces of code blueprints called
+            classes, which are used to create individual instances of objects. There are many object-oriented
+            programming languages including JavaScript, C++, Java, and Python.</p>
+        <p>Applications built using this paradigm break down the intended solution into reusable classes. Classes are
+            user defined data types and have a blueprint for the structure of methods and attributes. You then create
+            objects which are instances of the defined classes with specific data. Attributes of a class are the
+            information that is stored. They are defined in the class template and are filled with data when an instance
+            of that class is created. The methods of a class are the behaviors of the object: returning data,
+            setting/modifying an attribute, etc.</p>
+        <p>Let's say that we have to create a daycare application for a pre-school. You have to keep track of names,
+            ages, days attending, parent contact information, teachers, and classrooms. It would not be efficient to
+            create unique code for each human and classroom. Instead, we can create a base class for children called
+            child that contains properties that are shared between all children like age, gender, name, parents, etc.
+            The same can be done for employees and classrooms. You would then add unique attributes and methods to each
+            instanced class to represent differences.</p>
+        <h4>Benefits of Object-oriented Programming</h4>
+        <ul>
+            <li>OOP models complex things as reproducible, simple structures</li>
+            <li>Reusable, OOP objects can be used across programs</li>
+            <li>Allows for class-specific behavior through polymorphism</li>
+            <li>Easier to debug, classes often contain all applicable information to them</li>
+            <li>Secure, protects information through encapsulation</li>
+        </ul>
+        <h4>Four Principles of OOP</h4>
+        <ul>
+            <li>Inheritance - child classes inherit data and behaviors from parent class</li>
+            <li>Encapsulation - containing information in an object, exposing only selected information</li>
+            <li>Abstraction - only exposing high level public methods for accessing an object</li>
+            <li>Polymorphism - many methods can do the same task</li>
+        </ul>
+        <p>There are four pillars of object oriented programming: inheritance, encapsulation, abstraction,
+            polymorphism.</p>
+        <h5>Inheritance</h5>
+        <p>Inheritance allows classes to inherit features of other classes. Put another way, parent classes extend
+            attributes and behaviors to child classes. Inheritance supports reusability.
+            If basic attributes and behaviors are defined in a parent class, child classes can be created extending the
+            functionality of the parent class, and adding additional attributes and behaviors. The benefits of
+            inheritance are programs can create a generic parent class, and then create more specific child classes as
+            needed. This simplifies overall programming, because instead of recreating the structure of the parent class
+            multiple times, child classes automatically gain access to functionalities within their parent class.</p>
+        <h5>Encapsulation</h5>
+        <p>Encapsulation means containing all important information inside an object, and only exposing selected
+            information to the outside world. Attributes and behaviors are defined by the class template.
+            When an object is instantiated from the class, the data and methods are encapsulated in that object.
+            Encapsulation hides the internal software code implementation inside a class, and hides internal data of
+            inside objects.</p>
+        <ui>Encapsulation requires defining some fields as private and some as public.
+            <li>Private interface: methods and properties, accessible from other methods of the same class.</li>
+            <li>Public Interface: methods and properties, accessible also from outside the class.</li>
+        </ui>
+        <h5>Abstraction</h5>
+        <p>Abstraction means that the user interacts with only selected attributes and methods of an object. Abstraction
+            uses simplified, high level tools, to access a complex object. This is an extension of encapsulation. An
+            example of this would be that you don't need to know how the engine works in order to drive a car.</p>
+        <ui>Benefits of Abstraction:
+            <li>Simple, high level user interfaces</li>
+            <li>Complex code is hidden</li>
+            <li>Security</li>
+            <li>Easier software maintenance</li>
+            <li>Code updates rarely change abstraction</li>
+        </ui>
+        <h5>Polymorphism</h5>
+        <p>Polymorphism means designing objects to share behaviors. Using inheritance, you can have objects can override
+            shared parent behaviors, with specific child behaviors. Polymorphism allows the same method to execute
+            different
+            behaviors in two ways: method overriding and method overloading.</p>
+        <p>Method overriding is used in runtime polymorphism. In method overriding, a child class can provide a
+            different implementation than its parent class. Method overloading is done during compile time polymorphism.
+            Methods or functions may have the same name, but a different number of parameters passed into the method
+            call. Different results may occur depending on the number of parameters passed in.</p>
+        <h3>Glossary of terms related to OOP:</h3>
+        <ul>
+            <li>
+                instantiation - the creation of an object or class
+            </li>
+            <li>
+                object - an instance of a class that is created dynamically
+            </li>
+            <li>
+                class - an abstract blueprint used to create more specific, concrete objects
+            </li>
+            <li>
+                namespace - an identifier for one or more names from other similar names of different objects, groups or
+                the namespace in general
+            </li>
+            <li>
+                constructor - a special method of a class or structure in object-oriented programming that initializes a
+                newly created object of that type
+            </li>
+            <li>
+                fixture - sample data for testing
+            </li>
+            <li>
+                type hint - the method by which we can force functions to accept the desired data type
+            </li>
+            <li>
+                type cast - converting the data type of an instanced object
+            </li>
+            <li>
+                unit test - a comprehensive testing procedure is individually applied to the smallest parts of a
+                software
+                program for fitness or desired operation
+            </li>
+            <li>
+                static - keyword that can be used to declare a member of a type so that it is specific to that type
+            </li>
+            <li>
+                instance method - a method that belongs to instances of a class, not to the class itself
+            </li>
+            <li>
+                instance property - a property that belongs to instances of a class, not to the class itself
+            </li>
+            <li>
+                static method - a method that belongs to a class rather than an instance of a class
+            </li>
+            <li>
+                static property - a property that belongs to a class rather than an instance of a class
+            </li>
+            <li>
+                encapsulation - an object's ability to hide data and behavior that are not necessary to its user
+            </li>
+            <li>
+                inheritance - a mechanism wherein a new class is derived from an existing class
+            </li>
+            <li>
+                polymorphism - the ability of objects of different types to provide a unique interface for different
+                implementations of methods
+            </li>
+            <li>
+                abstraction - the extraction of relevant information from a larger data set in order to simplify a
+                codebase
+            </li>
+            <li>
+                SOLID - an acronym for five design principles intended to make software designs more understandable,
+                flexible, and maintainable. Single-responsibility principle, Open-closed principle, Liskov substitution
+                principle, Interface segregation principle, Dependency inversion principle.
+            </li>
+            <li>
+                Design Patterns - a repeatable solution to a software engineering problem
+            </li>
+        </ul>
 
-        Ullamcorper a lacus vestibulum sed arcu non. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Eu
-        tincidunt tortor aliquam nulla facilisi cras fermentum odio. Malesuada bibendum arcu vitae elementum curabitur
-        vitae nunc. Turpis massa tincidunt dui ut ornare lectus sit amet. Pharetra vel turpis nunc eget lorem dolor sed
-        viverra. Nisl purus in mollis nunc sed id. Sociis natoque penatibus et magnis. Sit amet nisl purus in mollis.
-        Mollis nunc sed id semper risus in. Odio pellentesque diam volutpat commodo sed egestas egestas.
-
-        Urna porttitor rhoncus dolor purus non enim. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium.
-        Tristique nulla aliquet enim tortor at auctor urna. Vitae turpis massa sed elementum tempus. Rutrum tellus
-        pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Nisl suscipit adipiscing bibendum est ultricies
-        integer. At elementum eu facilisis sed odio morbi quis. Vitae justo eget magna fermentum. Fames ac turpis
-        egestas integer eget aliquet nibh praesent tristique. Id neque aliquam vestibulum morbi blandit cursus risus at
-        ultrices. Nisi porta lorem mollis aliquam ut.
-
-        Elementum curabitur vitae nunc sed velit. Suspendisse sed nisi lacus sed viverra tellus. Venenatis a condimentum
-        vitae sapien pellentesque habitant morbi tristique senectus. Suspendisse faucibus interdum posuere lorem ipsum.
-        Eget aliquet nibh praesent tristique. Gravida rutrum quisque non tellus orci. Purus in mollis nunc sed. Orci eu
-        lobortis elementum nibh tellus molestie. Vitae nunc sed velit dignissim. Metus vulputate eu scelerisque felis
-        imperdiet proin fermentum leo. Arcu risus quis varius quam quisque id diam. Ullamcorper eget nulla facilisi
-        etiam dignissim diam quis. Et tortor at risus viverra. Urna duis convallis convallis tellus id interdum velit
-        laoreet id. Nec ultrices dui sapien eget. Ipsum dolor sit amet consectetur adipiscing. At varius vel pharetra
-        vel. Mi in nulla posuere sollicitudin aliquam. Augue eget arcu dictum varius duis at consectetur lorem donec.
-
-        Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Erat imperdiet sed euismod nisi porta lorem
-        mollis. Eu tincidunt tortor aliquam nulla facilisi cras. Quis lectus nulla at volutpat diam ut. Dictum sit amet
-        justo donec enim diam vulputate ut. Maecenas pharetra convallis posuere morbi leo urna molestie. Bibendum arcu
-        vitae elementum curabitur vitae nunc sed. Neque ornare aenean euismod elementum. Et netus et malesuada fames ac
-        turpis egestas sed tempus. Suspendisse interdum consectetur libero id faucibus nisl. Ultricies mi eget mauris
-        pharetra.
-    </p>
+    </div>
 </div>
+
 </body>
 </html>
