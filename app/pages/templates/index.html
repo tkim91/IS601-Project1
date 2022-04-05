@@ -17,7 +17,7 @@
 
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+        <title>{% block title %}{% endblock %}Project</title>
     {% endblock %}
 
 </head>
@@ -33,7 +33,7 @@
                 <a class="navbar-brand" href="#">Menu</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active active-hl" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/cicd">CICD</a>
@@ -47,14 +47,25 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/git">GIT</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/aaa">AAA Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/oop">OOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/pylint">Pylint</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/solid">SOLID</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
     <div class="container mb-5">
         <div class="row">
-            <div class="col">
-            </div>
+            <div class="col"></div>
             <div class="col-12">
                 <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -82,6 +93,30 @@
                                      alt="...">
                             </a>
                         </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <a href="/aaa">
+                                <img src="{{ url_for('static', filename='images/aaa.png') }}" class="d-block w-100"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <a href="/oop">
+                                <img src="{{ url_for('static', filename='images/oop.png') }}" class="d-block w-100"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <a href="/pylint">
+                                <img src="{{ url_for('static', filename='images/Pylint_Logo.png') }}" class="d-block w-100"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <a href="/solid">
+                                <img src="{{ url_for('static', filename='images/solid.png') }}" class="d-block w-100"
+                                     alt="...">
+                            </a>
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero"
                             data-bs-slide="prev">
@@ -95,8 +130,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col">
-            </div>
+            <div class="col"></div>
         </div>
     </div>
 
@@ -105,7 +139,7 @@
 </div>
 <footer class="center">
     <p>Author: Thomas Kim<br>
-    <a href="mailto:tdk4@njit.edu">tdk4@njit.edu</a>
+        <a href="mailto:tdk4@njit.edu">tdk4@njit.edu</a>
     </p>
 </footer>
 </body>

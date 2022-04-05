@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        <title>{% block title %}{% endblock %}Project</title>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+{% endblock %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/cicd">CICD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/docker">Docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/flask">Flask and Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/git">GIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/aaa">AAA Testing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active active-hl" aria-current="page" href="/oop">OOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/pylint">Pylint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/solid">SOLID</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div id="title">
+    <h1>Object Oriented Programming</h1>
+</div>
+<div class="container">
+    <div class="col px-8">
+        <h4>What is Object-oriented Programming?</h4>
+        <p>Object-oriented programming (OOP) is a programming paradigm that is used by nearly every developer at some
+            point in their programming career. It is so popular that it is taught as the standard way of programming at
+            most institutions. OOP structures a software program into simple, reusable pieces of code blueprints called
+            classes, which are used to create individual instances of objects. There are many object-oriented
+            programming languages including JavaScript, C++, Java, and Python.</p>
+        <p>Applications built using this paradigm break down the intended solution into reusable classes. Classes are
+            user defined data types and have a blueprint for the structure of methods and attributes. You then create
+            objects which are instances of the defined classes with specific data. Attributes of a class are the
+            information that is stored. They are defined in the class template and are filled with data when an instance
+            of that class is created. The methods of a class are the behaviors of the object: returning data,
+            setting/modifying an attribute, etc.</p>
+        <p>Let's say that we have to create a daycare application for a pre-school. You have to keep track of names,
+            ages, days attending, parent contact information, teachers, and classrooms. It would not be efficient to
+            create unique code for each human and classroom. Instead, we can create a base class for children called
+            child that contains properties that are shared between all children like age, gender, name, parents, etc.
+            The same can be done for employees and classrooms. You would then add unique attributes and methods to each
+            instanced class to represent differences.</p>
+        <h4>Benefits of Object-oriented Programming</h4>
+        <ul>
+            <li>OOP models complex things as reproducible, simple structures</li>
+            <li>Reusable, OOP objects can be used across programs</li>
+            <li>Allows for class-specific behavior through polymorphism</li>
+            <li>Easier to debug, classes often contain all applicable information to them</li>
+            <li>Secure, protects information through encapsulation</li>
+        </ul>
+        <h4>Four Principles of OOP</h4>
+        <ul>
+            <li>Inheritance - child classes inherit data and behaviors from parent class</li>
+            <li>Encapsulation - containing information in an object, exposing only selected information</li>
+            <li>Abstraction - only exposing high level public methods for accessing an object</li>
+            <li>Polymorphism - many methods can do the same task</li>
+        </ul>
+        <p>There are four pillars of object oriented programming: inheritance, encapsulation, abstraction,
+            polymorphism.</p>
+        <h5>Inheritance</h5>
+        <p>Inheritance allows classes to inherit features of other classes. Put another way, parent classes extend
+            attributes and behaviors to child classes. Inheritance supports reusability.
+            If basic attributes and behaviors are defined in a parent class, child classes can be created extending the
+            functionality of the parent class, and adding additional attributes and behaviors. The benefits of
+            inheritance are programs can create a generic parent class, and then create more specific child classes as
+            needed. This simplifies overall programming, because instead of recreating the structure of the parent class
+            multiple times, child classes automatically gain access to functionalities within their parent class.</p>
+        <h5>Encapsulation</h5>
+        <p>Encapsulation means containing all important information inside an object, and only exposing selected
+            information to the outside world. Attributes and behaviors are defined by the class template.
+            When an object is instantiated from the class, the data and methods are encapsulated in that object.
+            Encapsulation hides the internal software code implementation inside a class, and hides internal data of
+            inside objects.</p>
+        <ui>Encapsulation requires defining some fields as private and some as public.
+            <li>Private interface: methods and properties, accessible from other methods of the same class.</li>
+            <li>Public Interface: methods and properties, accessible also from outside the class.</li>
+        </ui>
+        <h5>Abstraction</h5>
+        <p>Abstraction means that the user interacts with only selected attributes and methods of an object. Abstraction
+            uses simplified, high level tools, to access a complex object. This is an extension of encapsulation. An
+            example of this would be that you don't need to know how the engine works in order to drive a car.</p>
+        <ui>Benefits of Abstraction:
+            <li>Simple, high level user interfaces</li>
+            <li>Complex code is hidden</li>
+            <li>Security</li>
+            <li>Easier software maintenance</li>
+            <li>Code updates rarely change abstraction</li>
+        </ui>
+        <h5>Polymorphism</h5>
+        <p>Polymorphism means designing objects to share behaviors. Using inheritance, you can have objects can override
+            shared parent behaviors, with specific child behaviors. Polymorphism allows the same method to execute
+            different
+            behaviors in two ways: method overriding and method overloading.</p>
+        <p>Method overriding is used in runtime polymorphism. In method overriding, a child class can provide a
+            different implementation than its parent class. Method overloading is done during compile time polymorphism.
+            Methods or functions may have the same name, but a different number of parameters passed into the method
+            call. Different results may occur depending on the number of parameters passed in.</p>
+        <h3>Glossary of terms related to OOP:</h3>
+        <ul>
+            <li>
+                instantiation - the creation of an object or class
+            </li>
+            <li>
+                object - an instance of a class that is created dynamically
+            </li>
+            <li>
+                class - an abstract blueprint used to create more specific, concrete objects
+            </li>
+            <li>
+                namespace - an identifier for one or more names from other similar names of different objects, groups or
+                the namespace in general
+            </li>
+            <li>
+                constructor - a special method of a class or structure in object-oriented programming that initializes a
+                newly created object of that type
+            </li>
+            <li>
+                fixture - sample data for testing
+            </li>
+            <li>
+                type hint - the method by which we can force functions to accept the desired data type
+            </li>
+            <li>
+                type cast - converting the data type of an instanced object
+            </li>
+            <li>
+                unit test - a comprehensive testing procedure is individually applied to the smallest parts of a
+                software
+                program for fitness or desired operation
+            </li>
+            <li>
+                static - keyword that can be used to declare a member of a type so that it is specific to that type
+            </li>
+            <li>
+                instance method - a method that belongs to instances of a class, not to the class itself
+            </li>
+            <li>
+                instance property - a property that belongs to instances of a class, not to the class itself
+            </li>
+            <li>
+                static method - a method that belongs to a class rather than an instance of a class
+            </li>
+            <li>
+                static property - a property that belongs to a class rather than an instance of a class
+            </li>
+            <li>
+                encapsulation - an object's ability to hide data and behavior that are not necessary to its user
+            </li>
+            <li>
+                inheritance - a mechanism wherein a new class is derived from an existing class
+            </li>
+            <li>
+                polymorphism - the ability of objects of different types to provide a unique interface for different
+                implementations of methods
+            </li>
+            <li>
+                abstraction - the extraction of relevant information from a larger data set in order to simplify a
+                codebase
+            </li>
+            <li>
+                SOLID - an acronym for five design principles intended to make software designs more understandable,
+                flexible, and maintainable. Single-responsibility principle, Open-closed principle, Liskov substitution
+                principle, Interface segregation principle, Dependency inversion principle.
+            </li>
+            <li>
+                Design Patterns - a repeatable solution to a software engineering problem
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</body>
+</html>

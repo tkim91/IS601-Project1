@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-        <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+        <title>{% block title %}{% endblock %}Project</title>
     {% endblock %}
 </head>
 <body>
 {% block body %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 {% endblock %}
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,19 +25,31 @@
             <a class="navbar-brand" href="#">Menu</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/cicd">CICD</a>
+                    <a class="nav-link active active-hl" aria-current="page" href="/cicd">CICD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/docker">Docker</a>
+                    <a class="nav-link" aria-current="page" href="/docker">Docker</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/flask">Flask and Python</a>
+                    <a class="nav-link" aria-current="page" href="/flask">Flask and Python</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/git">GIT</a>
+                    <a class="nav-link" aria-current="page" href="/git">GIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/aaa">AAA Testing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/oop">OOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/pylint">Pylint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/solid">SOLID</a>
                 </li>
             </ul>
         </div>
@@ -52,18 +65,18 @@
             <p>Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage,
                 and scale modern apps. CICD stands for Continuous Integration Continuous Delivery and can be broken up
                 into two parts.
-                <ul>
-                    <li>
-                        Continuous Integration: A software development practice where members of a team integrate their
-                        work frequently, and each integration is verified by an automated build (including test) to
-                        detect integration errors as quickly as possible.
-                    </li>
-                    <li>
-                        Continuous Delivery: A software development discipline where you build software in such a way
-                        that the software can be released to production at any time.
-                    </li>
+            <ul>
+                <li>
+                    Continuous Integration: A software development practice where members of a team integrate their
+                    work frequently, and each integration is verified by an automated build (including test) to
+                    detect integration errors as quickly as possible.
+                </li>
+                <li>
+                    Continuous Delivery: A software development discipline where you build software in such a way
+                    that the software can be released to production at any time.
+                </li>
 
-                </ul>
+            </ul>
             </p>
             <h3 class="row">GitHub Actions</h3>
             <p>These are deployment instructions that GitHub will take whenever code is pushed or merged. This project
@@ -85,7 +98,8 @@
                     <a href="https://docs.github.com/en/actions">GitHub Actions</a>
                 </li>
                 <li class="source">
-                    <a href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a>
+                    <a href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous
+                        Integration</a>
                 </li>
                 <li class="source">
                     <a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">Continuous Delivery </a>

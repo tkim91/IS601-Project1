@@ -2,12 +2,12 @@
 
 [![Production Workflow](https://github.com/tkim91/IS601-Project1/actions/workflows/prod.yml/badge.svg)](https://github.com/tkim91/IS601-Project1/actions/workflows/prod.yml)
 
-* [Production Deployment](https://tk-project1-prod.herokuapp.com/)
+* [Production Deployment](https://tk-project2-prod.herokuapp.com/)
 
 
 [![Development Workflow](https://github.com/tkim91/IS601-Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/tkim91/IS601-Project1/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://tk-project1-dev.herokuapp.com/)
+* [Developmental Deployment](https://tk-project2-dev.herokuapp.com/)
 
 
 ## Running Locally

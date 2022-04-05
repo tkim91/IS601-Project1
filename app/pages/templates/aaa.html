@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -37,10 +37,10 @@
                     <a class="nav-link" aria-current="page" href="/flask">Flask and Python</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active active-hl" aria-current="page" href="/git">GIT</a>
+                    <a class="nav-link" aria-current="page" href="/git">GIT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/aaa">AAA Testing</a>
+                    <a class="nav-link active active-hl" aria-current="page" href="/aaa">AAA Testing</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="/oop">OOP</a>
@@ -55,38 +55,18 @@
         </div>
     </nav>
 </header>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-1">
-            <img src="{{ url_for('static', filename='images/gitlogo.png') }}" class="content-img">
-        </div>
-        <div class="col-lg">
-            <h1 class="row">Welcome to GitHub 101</h1>
-            <p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It
-                offers the distributed version control and source code management (SCM) functionality of Git, plus its
-                own features. It provides access control and several collaboration features such as bug tracking,
-                feature requests, task management, continuous integration and wikis for every project.</p>
-            <h3 class="row">GitHub Branches</h3>
-            <p>A branch in a git repository is a contributor's copy of the source code with their changes.
-                the contributor will push their local code to the origin repository to save their changes.</p>
-            <h3 class="row">GitHub Merge</h3>
-            <p>This is used to combine branch A into branch B. GitHub will then check to see if there are any merge
-                conflicts between the two branches and will ask the merger to resolve them if detected.</p>
-            <h3 class="row">GitHub Commits</h3>
-            <p>Commits are snapshots of your local code that you want to send to git via push. You can rollback to
-                prior commits to undo any major changes.</p>
-            <h3 class="row">GitHub Tags</h3>
-            <p>Tags are metadata that can be attached to any commit. Ex: release version, associated user story</p>
-            <h3 class="row">GitHub Repositories</h3>
-            <p>A repository is where the source code resides. They can be public or private for security purposes.</p>
-        </div>
-        <div class="col-5">
-            <a href="https://github.com/tkim91/IS601-Project1">
-                <img src="{{ url_for('static', filename='images/github_link.png') }}"
-                     class="img-thumbnail thumbnail-size">
-            </a>
-        </div>
+<div id="title">
+    <h1>AAA Testing</h1>
+</div>
+<div class="container">
+    <div class="col px-8">
+        <h3>Arrange, Act, and Assert Pattern</h3>
+        <p>The AAA or Arrange-Act-Assert pattern is an industry standard for testing. This pattern suggests that test
+            methods should be divided into three sections, arrange, act, and assert, and each is only responsible for
+            the part that they are named after. Below is an example of this pattern in our test file for the calculator
+            app.</p>
+        <img src="{{ url_for('static', filename='images/aaa-test.png') }}">
     </div>
 </div>
 </body>
+</html>
