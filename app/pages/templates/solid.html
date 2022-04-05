@@ -70,13 +70,11 @@
                 responsibility over a single part of that program's functionality, and it should encapsulate that part.
             </li>
             <li>Open-close Principle - software entities (classes, modules, functions, etc.) should be open for
-                extension,
-                but closed for modification"; that is, such an entity can allow its behaviour to be extended without
-                modifying its source code.
+                extension, but closed for modification; that is, such an entity can allow its behaviour to be extended
+                without modifying its source code.
             </li>
             <li>Liskov Substitution Principle - an object (such as a class) and a sub-object (such as a class that
-                extends
-                the first class) must be interchangeable without breaking the program
+                extends the first class) must be interchangeable without breaking the program
             </li>
             <li>Interface Segregation Principle - no code should be forced to depend on methods it does not use</li>
             <li>Dependency inversion Principle - conventional dependency relationships established from high-level,
@@ -84,6 +82,14 @@
                 independent of the low-level module implementation details
             </li>
         </ul>
+        <h3>Examples with Calculator</h3>
+        <p>The calculator app that is built with this website showcases some of the SOLID principals.</p>
+        <img src="{{ url_for('static', filename='images/s-solid.png') }}">
+        <p>Here we can see the Single-Responsibility Principle, the 'S' in SOLID, with the different classes that make
+            up the calculator application. Each class has a specific responsibility, and it encapsulates it.</p>
+        <img src="{{ url_for('static', filename='images/i-solid.png') }}">
+        <p>The Calculator class showcases the 'I' in SOLID, the Interface Segregation Principle. We can see that as a
+            calculator, this class will both depend and use all of the methods defined in it.</p>
     </div>
 </div>
 </body>
